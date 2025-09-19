@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Lato, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+
 
 const lato = Lato({
   subsets: ["latin"],
@@ -31,6 +33,7 @@ export default function RootLayout({
         className={`${lato.className} ${roboto.className} antialiased`}
       >
         <Navbar/>
+        <Footer/>
         {children}
       </body>
     </html>
