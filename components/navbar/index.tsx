@@ -60,16 +60,18 @@ export default function Navbar(){
                 </div>
 
                 {isNavbarOpen && (
-                    <div className="text-offwhite absolute top-30 left-0 w-full bg-gradient-to-r from-verde4 to-verde2 flex flex-col items-center gap-6 py-6 border-t-verde4 bp:hidden">
-                        <Link href="/login">
-                            <span className="bg-gradient-to-bl from-verde4 to-verde3 border border-verde4 rounded-sm px-4 py-1">Login</span>
-                        </Link>
-                        <Link href="/registro">
-                            <span className="bg-gradient-to-bl from-verde4 to-verde3 border border-verde4 rounded-sm px-4 py-1">Register</span>
-                        </Link>
+                    <div className="text-offwhite absolute top-30 left-0 w-full bg-gradient-to-r from-verde4 to-verde2 flex flex-col items-center gap-3 py-6 border-t-verde4 bp:hidden">
+                        <div className="flex flex-row w-9/10 gap-5 mb-4 text-center">
+                            <Link href="/login" className="flex-1">
+                                <span className="block bg-gradient-to-bl from-verde4 to-verde3 border border-verde4 rounded-sm px-4 py-1">Login</span>
+                            </Link>
+                            <Link href="/registro" className="flex-1">
+                                <span className="block w-full bg-gradient-to-bl from-verde4 to-verde3 border border-verde4 rounded-sm px-4 py-1">Register</span>
+                            </Link>
+                        </div>
                         {links.map((link, index) =>
-                            <Link href={link.href} key={index}>
-                                <span className="rounded px-4 py-1 bp:px-3">{link.label}</span>
+                            <Link href={link.href} key={index} className="flex w-9/10 justify-center">
+                                <span className="w-full border border-rosa3 rounded px-4 py-1 bp:px-3">{link.label}</span>
                             </Link>
                         )}
                         
