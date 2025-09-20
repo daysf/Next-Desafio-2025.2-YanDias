@@ -33,8 +33,8 @@ export default function RootLayout({
         className={`${lato.className} ${roboto.className} antialiased`}
       >
         <Navbar/>
-        <Footer/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
