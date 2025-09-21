@@ -18,7 +18,7 @@ export default function Navbar(){
     const toggleNavbar = () => setIsNavbarOpen (!isNavbarOpen)
 
     return(
-        <header className="flex items-center top-0 bg-gradient-to-r from-verde4 to-verde2 sticky mx-auto w-full b py-8 px-4 bp:p-0">
+        <header className="flex z-50 items-center top-0 bg-gradient-to-r from-verde4 to-verde2 sticky mx-auto w-full b py-8 px-4 bp:p-0">
                 <Image src={'/Logo.png'}
                 alt="Logo da loja"
                 width={904}
