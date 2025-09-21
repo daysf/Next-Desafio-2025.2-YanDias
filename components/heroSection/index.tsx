@@ -5,26 +5,67 @@ import { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
 
+const images = {
+    serpentes: "/cobra.png", 
+    logo: "/logo.png",   
+    banner: "/banner.jpg"
+}
+
+const links = [
+    { href: '/posts', label: 'Produtos' },
+    { href: '/posts', label: 'Produtos' },
+    { href: '/posts', label: 'Produtos' },
+    { href: '/posts', label: 'Produtos' },
+]
+
 export default function HeroSection() {
     return (
-        <div className="flex w-full">
-            <div className="flex flex-col w-full text-offwhite leading-relaxed mx-6 my-10 gap-4 bp:gap-10 bp:my-20 bp:mx-18 ">
-                <h1 className="font-bold text-3xl leading-tight md:text-6xl xl:text-7xl 2xl:text-8xl 3xl:9xl">Cuidando do seu réptil com carinho e qualidade!</h1>
-                <p className="text-[10px] md:text-[16px] xl:text-xl 2xl:text-2xl 3xl:text-3xl">Explore a nossa loja e descubra acessórios que seu réptil vai adorar, com produtos de alta qualidade que garantem conforto,
-                    segurança e bem-estar. Desde terrários e aquários até alimentos e suplementos especializados, temos tudo para criar o ambiente perfeito para o seu amigo de sangue frio.</p>
-                <button className="bg-verde2 shadow-xl transform transition-transform duration-700 ease-out hover:scale-110 font-medium md:h-14 h-7 md:w-1/2 w-4/5 rounded-4xl cursor-pointer
-                    text-[10px] md:text-[16px] xl:text-xl 2xl:text-2xl 3xl:text-3xl">
-                    Encontre tudo aqui!
-                </button>
+        <div>
+            <div className="flex w-full">
+                <div className="flex flex-col w-full text-offwhite leading-relaxed mx-6 my-10 gap-4 bp:gap-10 bp:my-20 bp:mx-18 ">
+                    <h1 className="font-bold text-3xl leading-tight md:text-6xl xl:text-7xl 2xl:text-8xl 3xl:9xl">Cuidando do seu réptil com carinho e qualidade!</h1>
+                    <p className="text-[10px] md:text-[16px] xl:text-xl 2xl:text-2xl 3xl:text-3xl">Explore a nossa loja e descubra acessórios que seu réptil vai adorar, com produtos de alta qualidade que garantem conforto,
+                        segurança e bem-estar. Desde terrários e aquários até alimentos e suplementos especializados, temos tudo para criar o ambiente perfeito para o seu amigo de sangue frio.</p>
+                    <button className="bg-verde2 shadow-xl transform transition-transform duration-700 ease-out hover:scale-110 font-medium md:h-14 h-7 md:w-1/2 w-4/5 rounded-4xl cursor-pointer
+                        text-[10px] md:text-[16px] xl:text-xl 2xl:text-2xl 3xl:text-3xl">
+                        Encontre tudo aqui!
+                    </button>
+                </div>
+                <div className="flex w-full justify-end">
+                    <div className="relative w-8/10 h-[300px] md:h-[450px] bp:h-[785px]">
+                        <Image
+                            src="/cobra.png"
+                            alt="Uma cobra em um tronco"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                </div>
             </div>
-            <div className="flex w-full justify-end">
-                <div className="relative w-8/10 h-[300px] md:h-[450px] bp:h-[785px]">
-                    <Image
-                        src="/cobra.png"
-                        alt="Uma cobra em um tronco"
-                        fill
-                        className="object-cover"
-                    />
+            {/*nao tenho tempo p mexer com grid*/}
+            <div className="flex flex-row w-full ">
+                <div className="w-2/10 md:h-[180px]">
+                    <div className="w-full h-[90px] bg-rosa4"></div>
+                    <div className="w-full h-[90px] bg-rosa1"></div>
+                </div>
+                <div className="flex flex-row border border-rosa4 border-4 shadow-xl bg-offwhite w-6/10 p-10 justify-between md:h-[180px]">
+                    {links.map((link, index) =>
+                        <Link href={link.href} key={index}>
+                            <div className="mr-4"> 
+                                <Image
+                                    src={images.logo}
+                                    alt={`Imagem para o link ${link.label}`}
+                                    width={30}
+                                    height={30}
+                                />
+                            </div>
+                            <span className="transform transition-transform duration-700 ease-out hover:scale-110 rounded bp:px-4 py-2">{link.label}</span>
+                        </Link>
+                    )}
+                </div>
+                <div className="w-2/10 md:h-[180px]">
+                    <div className="w-full h-[90px] bg-rosa4"></div>
+                    <div className="w-full h-[90px] bg-rosa1"></div>
                 </div>
             </div>
         </div>
