@@ -5,23 +5,17 @@ import { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
 
-const images = {
-    serpentes: "/cobra.png", 
-    logo: "/logo.png",   
-    banner: "/banner.jpg"
-}
-
 const links = [
-    { href: '/posts', label: 'Produtos' },
-    { href: '/posts', label: 'Produtos' },
-    { href: '/posts', label: 'Produtos' },
-    { href: '/posts', label: 'Produtos' },
+    { href: '/posts', label: 'Serpentes', image: "/serpente.png" },
+    { href: '/posts', label: 'Jabutis', image: "/jabutipiranga.png" },
+    { href: '/posts', label: 'Cágados', image: "/cagado.png" },
+    { href: '/posts', label: 'Lagartos', image: "/iguana.png" },
 ]
 
 export default function HeroSection() {
     return (
         <div>
-            <div className="flex w-full">
+            <div className="flex w-full bg-rosa4">
                 <div className="flex flex-col w-full text-offwhite leading-relaxed mx-6 my-10 gap-4 bp:gap-10 bp:my-20 bp:mx-18 ">
                     <h1 className="font-bold text-3xl leading-tight md:text-6xl xl:text-7xl 2xl:text-8xl 3xl:9xl">Cuidando do seu réptil com carinho e qualidade!</h1>
                     <p className="text-[10px] md:text-[16px] xl:text-xl 2xl:text-2xl 3xl:text-3xl">Explore a nossa loja e descubra acessórios que seu réptil vai adorar, com produtos de alta qualidade que garantem conforto,
@@ -42,30 +36,20 @@ export default function HeroSection() {
                     </div>
                 </div>
             </div>
-            {/*nao tenho tempo p mexer com grid*/}
-            <div className="flex flex-row w-full ">
-                <div className="w-2/10 md:h-[180px]">
-                    <div className="w-full h-[90px] bg-rosa4"></div>
-                    <div className="w-full h-[90px] bg-rosa1"></div>
-                </div>
-                <div className="flex flex-row border border-rosa4 border-4 shadow-xl bg-offwhite w-6/10 p-10 justify-between md:h-[180px]">
+            
+            <div className="flex w-full items-center justify-center md:h-[180px] h-[90px] bg-gradient-to-b from-rosa4 via-rosa4 to-rosa1">
+                <div className="rounded items-center md:rounded-2xl flex flex-row border border-rosa4 border-2 md:border-4 shadow-xl bg-offwhite w-6/10 justify-between h-[90px] p-1 gap-1 md:p-10 md:h-[180px] sm:h-[100px]">
                     {links.map((link, index) =>
-                        <Link href={link.href} key={index}>
-                            <div className="mr-4"> 
-                                <Image
-                                    src={images.logo}
-                                    alt={`Imagem para o link ${link.label}`}
-                                    width={30}
-                                    height={30}
+                        <Link href={link.href} key={index} className="flex flex-col rounded items-center transform transition-transform duration-300 ease-out hover:scale-110">
+                                <Image className="rounded md:rounded-2xl border border-rosa4 md:border-2"
+                                    src={link.image}
+                                    alt={`Imagem de ${link.label}`}
+                                    width={70}
+                                    height={70}
                                 />
-                            </div>
-                            <span className="transform transition-transform duration-700 ease-out hover:scale-110 rounded bp:px-4 py-2">{link.label}</span>
+                            <span className="text-rosa4 font-extrabold md:font-bold text-[8px] md:text-[15px] bp:text-2xl bp:px-4 py-2">{link.label}</span>
                         </Link>
                     )}
-                </div>
-                <div className="w-2/10 md:h-[180px]">
-                    <div className="w-full h-[90px] bg-rosa4"></div>
-                    <div className="w-full h-[90px] bg-rosa1"></div>
                 </div>
             </div>
         </div>
