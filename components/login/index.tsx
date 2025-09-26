@@ -1,16 +1,16 @@
 'use client'
 
 import { ContactRound } from "lucide-react"
-import { useState} from "react"
+import { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
 import { div } from "framer-motion/client";
 
-export default function Login(){
-    return(
+export default function Login() {
+    return (
         <main className="flex w-full justify-center items-center bg-rosa1">
-            <div className="flex w-[90%] justify-between rounded md:rounded-2xl overflow-hidden">
-                <div className="hidden bg-gradient-to-br from-verde2 to-verde3 bp:flex w-full justify-center items-center md:p-25">
+            <div className="flex w-[90%] justify-between rounded-lg md:rounded-2xl overflow-hidden">
+                <div className="hidden bg-gradient-to-br from-verde2 to-verde3 bp:flex w-full justify-center items-center md:p-25 bp:p-15">
                     <Image src={'/Logo.png'}
                         alt="Logo da loja"
                         width={331}
@@ -18,47 +18,63 @@ export default function Login(){
                         className="object-contain h-70 w-70 bp:ml-5"
                     />
                 </div>
-                <div className="bg-gradient-to-bl from-rosa3 to-rosa4 flex flex-col w-full text-offwhite justify-center items-center md:p-25  font-['Lato']  gap-4 md:gap-14">
-                    <span className="text-6xl font-extrabold text-shadow-2xs tracking-widest">LOGIN</span>
-                    <form className="flex flex-col gap-2.5" action="">
+                <div className="bg-gradient-to-bl from-rosa3 to-rosa4 flex flex-col w-full text-offwhite justify-center items-center p-5 sm:p-10 bp:p-15 lg:py-10 lg:px-20 font-['Lato'] gap-8 md:gap-12">
+                    <span className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-shadow-2xs tracking-widest">LOGIN</span>
+                    <form className="flex flex-col gap-1 md:gap-2.5 w-full" action="">
                         <div className="">
                             <label htmlFor="nome"></label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 id="nome"
                                 placeholder="nome"
-                                className="md:h-12 md:px-6 md:py-2.5 h-6 px-3 rounded md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col justify-center items-start gap-2.5 w-72 h-7 justify-center text-white/50 text-sm font-medium font-['Poppins'] tracking-wide"
-                                />
+                                className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
+                            />
                         </div>
                         <div>
                             <label htmlFor="email"></label>
-                            <input 
-                                type="email" 
-                                id="email" 
+                            <input
+                                type="email"
+                                id="email"
                                 placeholder="seuemail@gmail.com"
-                                className=""
+                                className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
                             />
                         </div>
                         <div>
                             <label htmlFor="senha"></label>
-                            <input 
-                                type="password" 
+                            <input
+                                type="password"
                                 id="senha"
                                 placeholder="senha"
-                                className=""
+                                className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
                             />
                         </div>
                     </form>
-                    <div>
-                        <button>Login</button>
-                        <button type="button">Faça Login com o Google</button>
-                        <div>
-                            <p>Não tem uma conta?</p>
-                            <Link href="/" className="cursor-pointer"> 
-                                Conecte-se de graça!
+                    <div className="flex flex-col justify-center items-center w-full gap-1 md:gap-2.5">
+                        <button className="bg-verde2 flex w-full items-center overflow-hidden justify-center text-off-white  cursor-pointer transform transition-transform ease-out duration:300 hover:scale-103
+                        md:h-14 h-7 bg-verde-botões rounded-lg md:rounded-2xl md:text-sm text-[10px] font-medium font-['Poppins'] tracking-wide">Login</button>
+                        <button type="button" className="border-1 border-verde4 flex w-full items-center overflow-hidden justify-center text-verde4  cursor-pointer transform transition-transform ease-out duration:300 hover:scale-103
+                        md:gap-3 gap-1 md:h-14 h-7 bg-verde-botões rounded-lg md:rounded-2xl md:text-sm text-[10px] font-medium font-['Poppins'] tracking-wide">
+                            <Image
+                                src={"/google.png"}
+                                alt="Logo da Google"
+                                width={38}
+                                height={38}
+                                className="object-contain h-[60%]"
+                            />
+                            Faça Login com o Google</button>
+                        <div className="flex flex-row gap-0.5 md:gap-1 ">
+                            <p className="text-verde4 text-[8px] md:text-[10px] font-medium font-['Poppins'] tracking-tight">Não tem uma conta?</p>
+                            <Link href="/" className="transform transition-transform ease-out hover:text-verde2 cursor-pointer text-verde3 text-[8px] md:text-[10px] font-medium font-['Poppins'] tracking-tight">
+                                Clique aqui e conecte-se de graça!
                             </Link>
                         </div>
+                        <div className="flex pt-5">
+                        <Link href="/" className="transform transition-transform ease-out hover:text-rosa2 cursor-pointer text-rosa1/40 text-[10px] md:text-[12px] font-medium font-['Poppins'] tracking-tight">
+                            Voltar para a página inicial
+                        </Link>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </main>
