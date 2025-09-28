@@ -23,3 +23,14 @@
   --color-rosa3: #E13A96;
   --color-rosa4: #7B2052;
 }
+
+/*o preenchimento autmatico n respeita o tailwind, mesmo usando autofill la. a ia sugeriu isso e nao funcionou. ps:lembrar de pergunta p vinicius*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #C12A7C inset !important; 
+  -webkit-text-fill-color: #EDE0EA !important; 
+  border: 1px solid #EDE0EA !important;
+  transition: background-color 5000s ease-in-out 0s !important; 
+}
