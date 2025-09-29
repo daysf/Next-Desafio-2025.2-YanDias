@@ -1,3 +1,5 @@
+import { ContactRound, Instagram, Phone, Mail} from "lucide-react"
+
 export default function Contato() {
     return (
         <div className="flex flex-row flex-wrap w-full bg-rosa1 overflow-hidden">
@@ -37,24 +39,27 @@ export default function Contato() {
                         Acesse o mapa abaixo!
                     </h1>
                 </div>
-            </div>
-            <div className="flex flex-col justify-center items-center w-full md:rounded-2xl md:gap-1 gap-0.5">
-                    <div className="flex flex-col bg-offwhite justify-center items-center w-full border-2 border-rosa4 md:rounded-2xl md:p-10 p-5 rounded-lg">
-                        mapa aqui
+                <div className="flex flex-col bg-offwhite justify-center items-center w-full border-2 border-rosa4 md:rounded-2xl md:p-10 p-5 rounded-lg">
+                    mapa aqui
+                </div>
+                <div className="flex flex-col justify-center items-center w-full md:rounded-2xl md:gap-1 gap-0.5">
+                    <div className="gap-3 md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-rosa4 
+                                flex flex-row items-center w-full text-rosa3 text-[10px] md:text-sm font-medium font-['Lato'] tracking-wide autofill:bg-transparent">
+                        <Instagram />
+                        <span>@yandaysf</span>
                     </div>
-                    <div className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-rosa4 
-                                flex flex-col items-start w-full justify-center text-rosa3 text-[10px] md:text-sm font-medium font-['Lato'] tracking-wide autofill:bg-transparent">
-
+                    <div className="gap-3 md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-rosa4 
+                                flex flex-row items-center w-full text-rosa3 text-[10px] md:text-sm font-medium font-['Lato'] tracking-wide autofill:bg-transparent">
+                        <Phone/>
+                        <span>+55 (22) 94002-8922</span>
                     </div>
-                    <div className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-rosa4 
-                                flex flex-col items-start w-full justify-center text-rosa3 text-[10px] md:text-sm font-medium font-['Lato'] tracking-wide autofill:bg-transparent">
-
-                    </div>
-                    <div className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-rosa4 
-                                flex flex-col items-start w-full justify-center text-rosa3 text-[10px] md:text-sm font-medium font-['Lato'] tracking-wide autofill:bg-transparent">
-
+                    <div className="gap-3 md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-rosa4 
+                                flex flex-row items-center w-full text-rosa3 text-[10px] md:text-sm font-medium font-['Lato'] tracking-wide autofill:bg-transparent">
+                        <Mail/>
+                        <span>yandiasferreira@gmail.com</span>
                     </div>
                 </div>
+            </div>
         </div>
     )
 }
