@@ -1,19 +1,25 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Login() {
     const [isLogin, setIsLogin] = useState(true)
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     return (
         <main className="flex w-full justify-center items-center bg-rosa1">
             <div className="flex rounded-lg md:rounded-2xl overflow-hidden relative w-[90%] max-w-6xl md:h-[620px] h-[420px]" style={{ perspective: 1200 }}>
                 <motion.div
                     className="relative w-full md:h-full h-full"
-                    animate={{ rotateY: isLogin ? 0 : 180 }}
+                    initial={{rotateY: 180}}
+                    animate={{ rotateY: mounted ? (isLogin ? 0 : 180) :180 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     style={{ transformStyle: "preserve-3d" }}
                 >
