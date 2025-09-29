@@ -3,6 +3,9 @@ import { Lato, Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Login from "@/components/login";
+import Registro from "@/components/registro";
+
 
 
 const lato = Lato({

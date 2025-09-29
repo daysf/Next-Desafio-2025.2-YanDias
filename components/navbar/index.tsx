@@ -1,16 +1,19 @@
 'use client'
 
+import Login from "@/components/login";
+import Registro from "@/components/registro";
+
 import { ContactRound, Menu, X } from "lucide-react"
 import { useState} from "react"
 import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-    { href: '/posts', label: 'Home'},
-    { href: '/posts', label: 'Contato'},
-    { href: '/posts', label: 'Produtos'},    
-    { href: '/admin', label: 'Gerenciamento'},
-    { href: '/posts', label: 'Carrinho'},
+    { href: '/', label: 'Home'},
+    { href: '/contato', label: 'Contato'},
+    { href: '/produtos', label: 'Produtos'},    
+    { href: '/gerenciamento', label: 'Gerenciamento'},
+    { href: '/carrinho', label: 'Carrinho'},
 ]
 
 export default function Navbar(){

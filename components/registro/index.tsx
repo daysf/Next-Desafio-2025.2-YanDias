@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Login() {
-    const [isLogin, setIsLogin] = useState(true)
+export default function Registro() {
+    const [isLogin, setIsLogin] = useState(false)
 
     return (
         <main className="flex w-full justify-center items-center bg-rosa1">
