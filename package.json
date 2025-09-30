@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^6.14.0",
+    "@prisma/client": "^6.16.2",
     "@tailwindcss/vite": "^4.1.13",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.16",
     "lucide-react": "^0.544.0",
-    "next": "15.4.6",
+    "next": "^15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
@@ -25,7 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
-    "prisma": "^6.14.0",
+    "prisma": "^6.16.2",
     "tailwindcss": "^4.1.13",
     "typescript": "^5"
   }
