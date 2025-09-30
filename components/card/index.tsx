@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Card() {
     return (
-            <div className="flex flex-col border-2 border-rosa4 rounded md:p-5 p-1 bg-rosa1 w-full items-center justify-center md:gap-3 gap-1 shadow-xl">
+            <div className="flex flex-col rounded md:p-5 p-1 bg-offwhite w-full items-center justify-center md:gap-3 gap-1 shadow-xl">
                 <div className="relative w-full">
                     <Image
                         src="/saco.png"
@@ -19,11 +19,11 @@ export default function Card() {
                         Ração para quelônios
                     </h3>
                     <div className="flex flex-row mt-2 md:mt-4 md:gap-1 gap-0.5">
-                        <Star className="text-amarelinho" />
-                        <Star className="text-amarelinho" />
-                        <Star className="text-amarelinho" />
-                        <Star className="text-amarelinho" />
-                        <Star className="text-amarelinho" />
+                        <Star className="text-amber-300" />
+                        <Star className="text-amber-300" />
+                        <Star className="text-amber-300" />
+                        <Star className="text-amber-300" />
+                        <Star className="text-amber-300" />
                     </div>
                     <p className="justify-start text-verde3 text-md font-medium font-['Poppins'] leading-loose md:mt-2">R$49,00 </p>
 
