@@ -1,15 +1,14 @@
-
 import HeroSection from "@/components/heroSection";
 import MVV from "@/components/mvv";
-import Card from "@/components/card";
 import Login from "@/components/login";
 import Registro from "@/components/registro";
+import Carrossel from "@/components/carrossel";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
-      <Card/>
+      <Carrossel/>
       <MVV/>
     </div>
   );
