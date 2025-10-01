@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CardText() {
     return (
-            <div className="flex flex-col rounded md:p-5 p-1 bg-offwhite w-full items-center justify-center md:gap-3 gap-1 shadow-xl">
+            <div className="flex flex-col rounded md:p-5 p-3 bg-offwhite w-full items-center justify-center md:gap-3 gap-1 shadow-xl">
                 <div className="relative w-full">
                     <Image
                         src="/saco.png"
@@ -14,11 +14,11 @@ export default function CardText() {
                         className="rounded"
                     />
                 </div>
-                <div className="w-full">
+                <div className="w-full flex flex-col flex-grow">
                     <h3 className="text-verde3 flex-wrap text-xl font-bold font-['Poppins'] leading-tight md:text-2xl">
                         Ração para quelônios
                     </h3>
-                    <p className="flex flex-wrap text-verde4">Descriçãooooooooooooooo</p>
+                    <p className="text-verde4/80 text-sm md:text-md line-clamp-1">Descrição aqui para poder explicar</p>
                     <div className="flex flex-row mt-2 md:mt-4 md:gap-1 gap-0.5">
                         <Star className="text-amber-300" />
                         <Star className="text-amber-300" />
