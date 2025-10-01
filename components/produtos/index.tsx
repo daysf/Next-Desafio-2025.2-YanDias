@@ -6,8 +6,12 @@ import { motion } from "framer-motion"
 export default function Produtos() {
     return (
         <div className="bg-rosa1">
-            <div className="flex flex-row w-full ">
-                <div className="px-20 w-1/4 border-t border-rosa4 py-10 text-verde4 font-['Roboto']">
+            <div className="flex flex-col md:flex-row w-full">
+                
+                {/* Filtros */}
+                <div className="w-full md:w-1/4 border-t border-rosa4 py-6 px-6 md:px-10 lg:px-20 text-verde4 font-['Roboto']">
+                    
+                    {/* Categoria */}
                     <div className="mb-8">
                         <span className="font-semibold block pb-2 text-lg md:text-xl text-shadow-md">Categoria</span>
                         {[
@@ -30,7 +34,8 @@ export default function Produtos() {
                         ))}
                     </div>
 
-                    <div>
+                    {/* Marca */}
+                    <div className="mb-8">
                         <span className="font-bold block mb-2 text-lg md:text-xl text-shadow-md">Marca</span>
                         {["Alcon", "Animals", "AQUARIA", "Aquaterrario", "BOYU"].map((marca, i) => (
                             <div key={i} className="flex items-center">
@@ -39,9 +44,21 @@ export default function Produtos() {
                             </div>
                         ))}
                     </div>
+                    {/* Animais */}
+                    <div>
+                        <span className="font-bold block mb-2 text-lg md:text-xl text-shadow-md">Animais</span>
+                        {["Serpentes", "Jabutis", "Cágados", "Lagartos"].map((animal, i) => (
+                            <div key={i} className="flex items-center">
+                                <input type="checkbox" id={`animal-${i}`} />
+                                <label htmlFor={`animal-${i}`} className="ml-2">{animal}</label>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                <div className="flex flex-wrap w-3/4 px-20 py-10 border-t border-rosa4">
+
+                {/* Cards de produtos */}
+                <div className="flex flex-wrap w-full justify-center items-center md:w-3/4 px-6 md:px-10 lg:px-20 py-6 md:py-10 border-t border-rosa4">
                     {Array.from({ length: 12 }).map((_, i) => (
                         <div
                             key={i}
