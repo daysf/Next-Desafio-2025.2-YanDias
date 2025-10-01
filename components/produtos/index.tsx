@@ -1,16 +1,17 @@
 'use client'
 
 import CardText from "@/components/cardText";
+import Search from "@/components/search"
 import { motion } from "framer-motion"
 
 export default function Produtos() {
     return (
         <div className="bg-rosa1">
             <div className="flex flex-col md:flex-row w-full">
-                
+
                 {/* Filtros */}
-                <div className="w-full md:w-1/4 border-t border-rosa4 py-6 px-6 md:px-10 lg:px-20 text-verde4 font-['Roboto']">
-                    
+                <div className="w-full md:w-1/4  py-6 px-6 md:px-10 lg:py-45 lg:px-20 text-cinzinha font-['Roboto']">
+
                     {/* Categoria */}
                     <div className="mb-8">
                         <span className="font-semibold block pb-2 text-lg md:text-xl text-shadow-md">Categoria</span>
@@ -57,23 +58,30 @@ export default function Produtos() {
                 </div>
 
 
-                {/* Cards de produtos */}
-                <div className="flex flex-wrap w-full justify-center items-center md:w-3/4 px-6 md:px-10 lg:px-20 py-6 md:py-10 border-t border-rosa4">
-                    {Array.from({ length: 12 }).map((_, i) => (
-                        <div
-                            key={i}
-                            className="
+                {/*Div direita*/}
+                <div className="flex flex-col w-full items-center">
+
+                    <Search/>
+                    {/* Cards de produtos */}
+                    <div className="w-full h-[1px] bg-gradient-to-r from-rosa1 to-cinzinha" />
+                    <div className="flex flex-wrap w-full justify-center items-center px-6 md:px-10 lg:px-20 py-6 md:py-10">
+                        {Array.from({ length: 12 }).map((_, i) => (
+                            <div
+                                key={i}
+                                className="
                                 embla__slide
                                 flex-[0_0_100%]
                                 sm:flex-[0_0_50%]
                                 lg:flex-[0_0_calc(100%/3)]
                                 p-2
                             "
-                        >
-                            <CardText />
-                        </div>
-                    ))}
+                            >
+                                <CardText />
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
             </div>
         </div>
     )
