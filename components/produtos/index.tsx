@@ -5,6 +5,8 @@ import Search from "@/components/search"
 import { motion } from "framer-motion"
 
 export default function Produtos() {
+    const count =0;
+
     return (
         <div className="bg-rosa1">
             <div className="flex flex-col md:flex-row w-full">
@@ -61,9 +63,9 @@ export default function Produtos() {
                 {/*Div direita*/}
                 <div className="flex flex-col w-full items-center">
 
-                    <Search/>
+                    <Search count={count}/>
                     {/* Cards de produtos */}
-                    <div className="w-full h-[1px] bg-gradient-to-r from-rosa1 to-cinzinha" />
+                    <div className="w-full h-[1px] bg-gradient-to-r from-rosa to-cinzinha" />
                     <div className="flex flex-wrap w-full justify-center items-center px-6 md:px-10 lg:px-20 py-6 md:py-10">
                         {Array.from({ length: 12 }).map((_, i) => (
                             <div

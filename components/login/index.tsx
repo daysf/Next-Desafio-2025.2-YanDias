@@ -14,7 +14,7 @@ export default function Login() {
     }, [])
 
     return (
-        <main className="flex w-full justify-center items-center bg-rosa1">
+        <main className="flex w-full h-screen justify-center items-center bg-rosa1">
             <div className="flex rounded-lg md:rounded-2xl overflow-hidden relative w-[90%] max-w-6xl md:h-[620px] h-[420px]" style={{ perspective: 1200 }}>
                 <motion.div
                     className="relative w-full md:h-full h-full"
