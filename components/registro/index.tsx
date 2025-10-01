@@ -5,11 +5,12 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
+{/*acho q me empolguei c a gambiarra p animação e viajei em nao usar a componentizacao do react direito*/}
 export default function Registro() {
     const [isLogin, setIsLogin] = useState(false)
 
     return (
-        <main className="flex w-full justify-center items-center bg-rosa1">
+        <main className="flex h-screen w-full justify-center items-center bg-rosa1">
             <div className="flex rounded-lg md:rounded-2xl overflow-hidden relative w-[90%] max-w-6xl md:h-[620px] h-[420px]" style={{ perspective: 1200 }}>
                 <motion.div
                     className="relative w-full md:h-full h-full"
@@ -116,13 +117,13 @@ export default function Registro() {
                         <div className="bg-gradient-to-bl from-rosa3 to-rosa4 flex flex-col w-full text-offwhite justify-center items-center p-5 sm:p-10 bp:p-15 lg:py-10 lg:px-20 font-['Lato'] gap-8 md:gap-12">
                             <span className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-shadow-2xs tracking-widest">REGISTRO</span>
 
-                            <form className="flex flex-col gap-1 md:gap-2.5 w-full">
+                            <form className="flex flex-col gap-0.5 md:gap-1 w-full">
                                 <div>
                                     <input
                                         type="text"
                                         id="reg-nome"
                                         placeholder="nome"
-                                        className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
+                                        className="md:h-10 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
                                     />
                                 </div>
                                 <div>
@@ -130,7 +131,7 @@ export default function Registro() {
                                         type="email"
                                         id="reg-email"
                                         placeholder="seuemail@gmail.com"
-                                        className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
+                                        className="md:h-10 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
                                     />
                                 </div>
                                 <div>
@@ -138,7 +139,15 @@ export default function Registro() {
                                         type="password"
                                         id="reg-senha"
                                         placeholder="senha"
-                                        className="md:h-12 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-2xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
+                                        className="md:h-10 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
+                                    />
+                                </div>
+                                <div>
+                                    <input
+                                        type="password"
+                                        id="reg-senha"
+                                        placeholder="confirmar senha"
+                                        className="md:h-10 md:px-6 md:py-2.5 h-7 px-2 rounded-lg md:rounded-xl outline outline-1 outline-offset-[-1px] outline-off-white focus:outline-verde1 flex flex-col items-start w-full justify-center text-white/50 text-[10px] md:text-sm font-medium font-['Poppins'] tracking-wide"
                                     />
                                 </div>
                             </form>
